@@ -1,0 +1,16 @@
+
+version: "3"
+services:
+  nginx:
+    image: nginx:1.13
+    ports:
+      - 8080:80
+    volumes:
+      - ./gatling/results:/usr/share/nginx/html/results
+  gatling:
+    image: denvazh/gatling:2.2.5
+    volumes:
+      - ./gatling/user-files:/opt/gatling/user-files
+      - ./gatling/results:/opt/gatling/results
+      - ./gatling/gatling_wrapper.sh:/opt/gatling/gatling_wrapper.sh
+    entrypoint: /bin/sh gatling_wrapper.sh
