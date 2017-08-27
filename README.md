@@ -1,7 +1,7 @@
 gatlinginx
 ====
 
-gatling(http://gatling.io/)の実行結果htmlをnginxで見れるようにしたいリポジトリ
+gatling( http://gatling.io/ )の実行結果htmlをnginxで見れるようにしたいリポジトリ
 
 ## Description
 
